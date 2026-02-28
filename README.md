@@ -14,6 +14,7 @@ Observer le trafic réseau d’un émulateur Android à l’aide de Burp Suite d
 * Port proxy : `8080`
 
 ---
+![Liste](Lab_3_MobileSecurity/4.png)
 
 ## Étapes
 
@@ -21,7 +22,9 @@ Observer le trafic réseau d’un émulateur Android à l’aide de Burp Suite d
 
 Vérifier que le proxy listener est actif.
 
-[Screenshot — Proxy listener]
+![Liste](Lab_3_MobileSecurity/3.png)
+![Liste](Lab_3_MobileSecurity/2.png)
+
 
 ---
 
@@ -34,7 +37,7 @@ Dans l’émulateur :
 * Host → `192.168.11.101`
 * Port → `8080`
 
-[Screenshot — Proxy Android]
+![Liste](Lab_3_MobileSecurity/6.png)
 
 ---
 
@@ -46,19 +49,27 @@ Ouvrir le navigateur de l’émulateur et accéder à :
 
 Vérifier que des requêtes apparaissent dans **HTTP history**.
 
-[Screenshot — HTTP history]
+![Liste](Lab_3_MobileSecurity/16.png)
+![Liste](Lab_3_MobileSecurity/17.png)
+![Liste](Lab_3_MobileSecurity/9.png)
+
+
 
 ---
 
 ### 4. Test Intercept
 
 * Activer **Intercept is on**
+![Liste](Lab_3_MobileSecurity/11.png)
+
 * Rafraîchir la page
 * Observer la requête
+![Liste](Lab_3_MobileSecurity/10.png)
+
 * Cliquer **Forward**
 * Remettre **Intercept is off**
 
-[Screenshot — Intercept]
+![Liste](Lab_3_MobileSecurity/1.png)
 
 ---
 
@@ -66,15 +77,31 @@ Vérifier que des requêtes apparaissent dans **HTTP history**.
 
 Observer l’écran **Install a certificate** dans l’émulateur et identifier le rôle du certificat CA pour l’analyse HTTPS en laboratoire.
 
-[Screenshot — Certificate screen]
+![Liste](Lab_3_MobileSecurity/22.png)
+![Liste](Lab_3_MobileSecurity/13.png)
+![Liste](Lab_3_MobileSecurity/12.png)
+![Liste](Lab_3_MobileSecurity/14.png)
+![Liste](Lab_3_MobileSecurity/15.png)
+
+
+
+
 
 ---
 
 ## Nettoyage
 
 * Remettre le proxy Android sur **None**
+* ![Liste](Lab_3_MobileSecurity/18.png)
+
 * Supprimer le certificat de laboratoire si installé
+![Liste](Lab_3_MobileSecurity/19.png)
+![Liste](Lab_3_MobileSecurity/20.png)
+
+
 * Fermer Burp Suite
+![Liste](Lab_3_MobileSecurity/21.png)
+
 
 ---
 
