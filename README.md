@@ -2,7 +2,7 @@
 
 ## Objectif
 
-Observer le trafic réseau d’un émulateur Android à l’aide de Burp Suite dans un environnement de laboratoire.
+Observation du trafic réseau d’un émulateur Android à l’aide de Burp Suite dans un environnement de laboratoire.
 
 ---
 
@@ -21,7 +21,7 @@ Observer le trafic réseau d’un émulateur Android à l’aide de Burp Suite d
 
 ### 1. Démarrage de Burp
 
-Vérifier que le proxy listener est actif.
+Vérification du bon fonctionnement du proxy listener.
 
 ![Liste](lab_3_screenshots/3.png)
 ![Liste](lab_3_screenshots/2.png)
@@ -30,12 +30,12 @@ Vérifier que le proxy listener est actif.
 
 ### 2. Configuration du proxy Android
 
-Dans l’émulateur :
+Au niveau de l’émulateur :
 
 * Wi-Fi → AndroidWifi
-* Proxy → Manual
-* Host → `192.168.11.101`
-* Port → `8080`
+* Proxy configuré en **Manual**
+* Host : `192.168.11.101`
+* Port : `8080`
 
 ![Liste](lab_3_screenshots/6.png)
 
@@ -43,11 +43,11 @@ Dans l’émulateur :
 
 ### 3. Vérification HTTP
 
-Dans le navigateur de l’émulateur, ouvrir :
+Accès au site :
 
 `http://neverssl.com`
 
-Vérifier que des requêtes apparaissent dans **HTTP history**.
+Constat de l’apparition des requêtes dans **HTTP history**, confirmant le passage du trafic par le proxy.
 
 ![Liste](lab_3_screenshots/16.png)
 ![Liste](lab_3_screenshots/17.png)
@@ -57,25 +57,18 @@ Vérifier que des requêtes apparaissent dans **HTTP history**.
 
 ### 4. Test Intercept
 
-* Activer **Intercept is on**
-  ![Liste](lab_3_screenshots/11.png)
+Activation temporaire de l’interception afin d’observer la mise en attente d’une requête.
+Après observation, transfert de la requête puis désactivation de l’interception.
 
-* Rafraîchir la page
-
-* Observer la requête
-  ![Liste](lab_3_screenshots/10.png)
-
-* Cliquer **Forward**
-
-* Remettre **Intercept is off**
-
+![Liste](lab_3_screenshots/11.png)
+![Liste](lab_3_screenshots/10.png)
 ![Liste](lab_3_screenshots/1.png)
 
 ---
 
 ### 5. Principe HTTPS
 
-Observer l’écran **Install a certificate** dans l’émulateur et identifier le rôle du certificat CA pour l’analyse HTTPS en laboratoire.
+Observation de l’écran **Install a certificate** dans l’émulateur et identification du rôle du certificat CA dans un contexte d’analyse HTTPS en laboratoire.
 
 ![Liste](lab_3_screenshots/22.png)
 ![Liste](lab_3_screenshots/13.png)
@@ -87,18 +80,18 @@ Observer l’écran **Install a certificate** dans l’émulateur et identifier 
 
 ## Nettoyage
 
-* Remettre le proxy Android sur **None**
+* Retour du proxy Android sur **None**
   ![Liste](lab_3_screenshots/18.png)
 
-* Supprimer le certificat de laboratoire si installé
+* Suppression du certificat de laboratoire (si présent)
   ![Liste](lab_3_screenshots/19.png)
   ![Liste](lab_3_screenshots/20.png)
 
-* Fermer Burp Suite
+* Fermeture de Burp Suite
   ![Liste](lab_3_screenshots/21.png)
 
 ---
 
 ## Conclusion
 
-Le test confirme que le proxy permet d’observer le trafic de l’émulateur dans un contexte contrôlé.
+Le test met en évidence le rôle du proxy comme point de passage du trafic réseau et confirme le bon fonctionnement de l’observation dans un environnement contrôlé.
